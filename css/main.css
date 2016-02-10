@@ -168,9 +168,15 @@ body {
 .row {
   width: 100%;
 }
+.cf:before,
+.cf:after,
 .row:before,
 .row:after {
   content: "";
+  display: table;
+}
+.cf:after,
+.row:after {
   clear: both;
 }
 body {
@@ -178,9 +184,13 @@ body {
 }
 .container {
   font-family: 'Roboto';
-  width: 900px;
+  width: 800px;
+  margin: 0 auto;
+  position: relative;
+  top: 50%;
+  transform: translate(0, -50%);
 }
-.container > div {
+.container .unu > div {
   background-color: #F8F7F0;
   padding: 35px;
   width: 350px;
@@ -188,77 +198,95 @@ body {
   margin: 25px;
   border: 1px solid black;
 }
-.container > div .header {
-  border-bottom: 1px solid #141b3f;
+.container .unu > div .header {
+  border-bottom: 2px solid #141b3f;
   height: 30px;
 }
-.container > div .header > div {
+.container .unu > div .header > div {
   margin: 0 15px;
   line-height: 20px;
   font-size: 15px;
   letter-spacing: 0.5px;
 }
-.container > div .header > div:nth-child(2) {
+.container .unu > div .header > div:nth-child(2) {
   color: #b4b4b4;
   font-size: 13px;
 }
-.container > div .notes {
+.container .unu > div .notes {
   padding: 10px 15px;
   border-bottom: 1px solid #c8c8c8;
 }
-.container > div .notes > p:nth-child(1) {
+.container .unu > div .notes > p:nth-child(1) {
   color: #444;
   font-size: 14px;
 }
-.container > div .notes > p:nth-child(2) {
+.container .unu > div .notes > p:nth-child(2) {
   color: #b4b4b4;
   font-size: 11px;
   line-height: 20px;
 }
-.container > div .notes:last-child {
+.container .unu > div .notes:nth-child(5) {
   border: none;
 }
-.container > div .footer {
-  border-top: 1px solid #141b3f;
+.container .unu > div .doi {
+  position: absolute;
+  bottom: 25px;
+  width: 278px;
+}
+.container .unu > div .doi .footer {
+  border-top: 2px solid #141b3f;
   height: 60px;
   padding: 15px 0 15px;
 }
-.container > div .footer > div:nth-child(1) {
+.container .unu > div .doi .footer > div:nth-child(1) {
+  padding: 0 10px;
   height: 25px;
   background-size: 19px;
   background-image: url(../images/check.png);
   background-repeat: no-repeat;
   background-position: center;
 }
-.container > div .footer > div:nth-child(2) {
+.container .unu > div .doi .footer > div:nth-child(2) {
+  padding: 0 10px;
   height: 25px;
   background-size: 13px;
   background-image: url(../images/close.png);
   background-repeat: no-repeat;
   background-position: center;
 }
-.container > div .footer > div:nth-child(3) {
+.container .unu > div .doi .footer > div:nth-child(3) {
+  padding: 0 10px;
   height: 25px;
   background-size: 20px;
   background-image: url(../images/upload.png);
   background-repeat: no-repeat;
   background-position: center;
 }
-.container > div .footer > div:nth-child(4) {
+.container .unu > div .doi .footer > div:nth-child(4) {
+  padding: 0 10px;
   height: 25px;
   background-size: 17px;
   background-image: url(../images/zoom.png);
   background-repeat: no-repeat;
   background-position: center;
 }
-.container > div .footer > div:nth-child(5) {
+.container .unu > div .doi .footer > div:nth-child(5) {
+  padding: 0 10px;
   height: 25px;
   background-size: 15px;
   background-image: url(../images/menu.png);
   background-repeat: no-repeat;
   background-position: center;
 }
-.container > div:nth-child(2) p {
+.container .unu > div:nth-child(1) > .header > div:nth-child(2) {
+  height: 20px;
+  width: 25px;
+  background-size: 15px;
+  background-image: url(../images/plus.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.container .unu > div:nth-child(2) p {
   font-size: 14px;
   color: #777;
   margin: 15px;
